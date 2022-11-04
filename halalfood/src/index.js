@@ -10,20 +10,14 @@ import App from './App';
 import './css/navbar.css'
 import './index.css';
 
-let conf = {
-  navbar: {
-    imgs: {
-      eda: require('./media/news.jpg'),
-    }
-  }
-}
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App app={conf}/>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

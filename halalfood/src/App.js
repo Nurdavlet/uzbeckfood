@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Main } from "./main/main.jsx";
 
-let App = () => {
-  let props = this.props;
+function App() {
+  
 
   return (
     
     <Routes>
-      <Route  path='/' element={<Main main = {props.app}/>} >
+      <Route  path='/' element={<Main/>} >
         
       </Route>      
     </Routes>

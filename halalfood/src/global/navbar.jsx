@@ -6,16 +6,16 @@ import * as React from "react";
 import i18n from "../i18n/config.js";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
-const jpgEda = require ('../../front/assert/news.jpg');
+const jpgEda = require ('../media/news.jpg');
 
-export function NavBar(props) {
+export function NavBar() {
     const { t } = useTranslation();
     function changeLanguage(e)  {
         i18n.changeLanguage(e.target.value);
     }
     return (
         <div className="navbar">
-            <img src={props.imgs.eda}></img>
+            <img src={jpgEda}></img>
         <ul>
             <li><Link to="/recipes">{t('recipes')}</Link></li>
             <li><Link to="/products">{t('products')}</Link></li>
