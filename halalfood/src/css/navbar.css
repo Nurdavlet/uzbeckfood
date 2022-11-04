@@ -1,0 +1,24 @@
+.navbar > ul {
+    list-style-type: none;
+}
+header {
+    top: 0;
+    max-width: 150px;
+    width: 150px;
+    position: fixed;
+    height: 100%;
+    bottom: 0;
+    background: #2f3032;
+}
+
+.navbar {
+    max-width: 150px;
+    color: white;
+    border: 2px solid green;
+    height: 60%;
+}
+
+ li > a{
+    color: white;
+    text-decoration: none;
+}

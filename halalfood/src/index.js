@@ -1,19 +1,34 @@
 'use strcit'
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import App from './App';
+
+import './css/navbar.css'
+import './index.css';
+
+let conf = {
+  navbar: {
+    imgs: {
+      eda: require('./media/news.jpg'),
+    }
+  }
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App/>
+      <App app={conf}/>
     </BrowserRouter>
   </React.StrictMode>
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

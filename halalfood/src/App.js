@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Main } from "./main/main.d";
+import { Main } from "./main/main.jsx";
 
-function App() {
+let App = () => {
+  let props = this.props;
+
   return (
     
     <Routes>
-      <Route  path='/' element={<Main/>} >
+      <Route  path='/' element={<Main main = {props.app}/>} >
         
       </Route>      
     </Routes>
