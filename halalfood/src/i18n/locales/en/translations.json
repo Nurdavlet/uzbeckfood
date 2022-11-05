@@ -1,4 +1,7 @@
 {
     "recipes": "recipes",
-    "products": "products"
+    "products": "products",
+    "howcook": "how cook",
+    "cookbook": "cook book",
+    "authors": "authors"
 }

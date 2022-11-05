@@ -4,6 +4,7 @@ header {
     width: 150px;
     display: flex;
     flex-direction: column;
+    
     background-color: #2f3032;
     height: 100%;
     margin: 0;
@@ -16,15 +17,30 @@ text-align: center;
 /* max-height: 60%; */
 /* min-height: 60%; */
 height: 60%;
-flex-wrap: wrap;
+flex-wrap:nowrap;
 flex-direction: column;
 align-items: center;
-align-content: center; 
+align-content: center;
 
     
 }
+
+.eda {
+    margin: 20px auto;
+    height: 50px;
+}
+
+
+.link {
+    text-decoration: none;
+    color: white;
+    margin: 25px 0 0 0 ;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
 .navbarico {
-    height: 13px;
+    height: 14px;
     margin: 0 13px 0 0;
 }
 
@@ -36,7 +52,26 @@ align-content: center;
     flex: 1 0 auto;
 
 }
+
 .langchangebutton {
+    margin: 0 auto 25px;
     align-self: end;
+    background: none;
+    border: none;
+    
+}
+.ru, .en {
+    border: none;
+    background: none;
+    color: white;
+    text-transform:uppercase;
+    font-size: 14px;
 }
 
+.ru:focus {
+    color: gray;
+}
+
+.en:focus {
+    color: gray;
+}

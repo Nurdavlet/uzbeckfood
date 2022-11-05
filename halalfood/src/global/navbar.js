@@ -8,6 +8,8 @@ import googlePng from './g.png';
 import fb from './fb.png';
 import vk from './vk.png';
 import instagram from './instagram.png';
+import eda from './eda.png';
+
 
 export function Main () {
     const { t } = useTranslation();
@@ -17,15 +19,19 @@ export function Main () {
     return (
         <>
         <header>
+            <img src={eda} className="eda"/>
             <div className="navbar">
                 
                 <ul>
-                    <li><Link to="/recipes">{t('recipes')}</Link></li>
-                    <li><Link to="/products">{t('products')}</Link></li>
+                    <li><Link to="/recipes" className="link">{t('recipes')}</Link></li>
+                    <li><Link to="/products" className="link">{t('products')}</Link></li>
+                    <li><Link to="/howcook" className="link">{t('howcook')}</Link></li>
+                    <li><Link to="/cookbook" className="link">{t('cookbook')}</Link></li>
+                    <li><Link to="/authors" className="link">{t('authors')}</Link></li>
                 </ul>
                 <div className="langchangebutton">
-                    <button onClick={changeLanguage} value="en">en</button>
-                    <button onClick={changeLanguage} value="ru">ru</button>
+                    <button onClick={changeLanguage} className="en" value="en">en</button>
+                    <button onClick={changeLanguage} className="ru" value="ru">ru</button>
                 </div>
                 <div className="navbaricons">
                     <a href="vk.com"><img className="navbarico" src={vk}/></a>
