@@ -1,9 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Main } from "./main/main.jsx";
+import { Main } from "./global/navbar";
 
 function App() {
-  
-
   return (
     
     <Routes>
