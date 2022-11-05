@@ -6,11 +6,20 @@ header {
     flex-direction: column;
     
     background-color: #2f3032;
-    height: 100%;
-    margin: 0;
-    position: fixed;
+    height: 100vh;
+    margin: 0 ;
+    /* top: 0;
+    bottom: 0; */
+    /* align-items: stretch; */
+    
 
 }
+header {
+    position: fixed;
+    
+}
+
+
 .navbar {
     display: flex;
 text-align: center;
@@ -26,7 +35,7 @@ align-content: center;
 }
 
 .eda {
-    margin: 20px auto;
+    margin: 20px 40px;
     height: 50px;
 }
 

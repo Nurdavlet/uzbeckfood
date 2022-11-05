@@ -1,0 +1,14 @@
+.content {
+    /* flex-wrap: ; */
+    margin-left: 175px;
+}
+.lupa {
+    width: 15px;
+    
+}
+
+.container {
+    width: 100vw;
+    
+    /* flex-direction: column; */
+}

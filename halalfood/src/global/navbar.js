@@ -44,7 +44,7 @@ export function Navbar () {
 
             </div>
         </header>
-
+        <div className="navbarclone"></div>
         </>
     );
 }
