@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Main } from "./global/navbar";
+import { Main } from "./main/main.jsx";
 
 function App() {
   return (

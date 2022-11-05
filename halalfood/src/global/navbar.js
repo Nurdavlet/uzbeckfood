@@ -11,7 +11,7 @@ import instagram from './instagram.png';
 import eda from './eda.png';
 
 
-export function Main () {
+export function Navbar () {
     const { t } = useTranslation();
     function changeLanguage(e) {
         i18n.changeLanguage(e.target.value);
