@@ -4,7 +4,7 @@ import lupa from "./lupa.png";
 export default function Content() {
 
         return(
-            <div className="conent">
+            <div className="content">
                 <div className="searchbabel">
                     <div><img className="lupa" src={lupa}/></div>
                 </div>

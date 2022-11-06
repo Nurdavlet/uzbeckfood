@@ -1,10 +1,10 @@
 .content {
     /* flex-wrap: ; */
     margin-left: 175px;
+    padding-top: 20px;
 }
 .lupa {
     width: 15px;
-    
 }
 
 .container {
