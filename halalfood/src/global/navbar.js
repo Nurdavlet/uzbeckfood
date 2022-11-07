@@ -40,11 +40,8 @@ export function Navbar () {
                     <a href="google.com"><img className="navbarico" src={googlePng}/></a>
                 </div>
             </div>
-            <div>
-
-            </div>
         </header>
-        <div className="navbarclone"></div>
+        {/* <div className="navbarclone"></div> */}
         </>
     );
 }

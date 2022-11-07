@@ -2,11 +2,19 @@
     /* flex-wrap: ; */
     margin-left: 175px;
     padding-top: 20px;
+    
 }
 .lupa {
     width: 15px;
 }
+.searchbabel  {
+    width: 15px;
+}
 
+.lupab {
+    border: none;
+    background: none;
+}
 .container {
     width: 100vw;
     
