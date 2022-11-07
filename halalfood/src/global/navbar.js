@@ -24,9 +24,8 @@ export function Navbar () {
                 
                 <ul>
                     <li><Link to="/recipes" className="link">{t('recipes')}</Link></li>
-                    <li><Link to="/products" className="link">{t('products')}</Link></li>
-                    <li><Link to="/howcook" className="link">{t('howcook')}</Link></li>
                     <li><Link to="/cookbook" className="link">{t('cookbook')}</Link></li>
+                    <li><Link to="/diary" className="link">{t('diary')}</Link></li>
                     <li><Link to="/authors" className="link">{t('authors')}</Link></li>
                 </ul>
                 <div className="langchangebutton">
@@ -34,10 +33,10 @@ export function Navbar () {
                     <button onClick={changeLanguage} className="ru" value="ru">ru</button>
                 </div>
                 <div className="navbaricons">
-                    <a href="vk.com"><img className="navbarico" src={vk}/></a>
-                    <a href="fb.com"><img className="navbarico" src={fb}/></a>
-                    <a href="instagram.com"><img className="navbarico" src={instagram}/></a>
-                    <a href="google.com"><img className="navbarico" src={googlePng}/></a>
+                    <a href="http://www.vk.com"><img className="navbarico" src={vk}/></a>
+                    <a href="http://www.fb.com"><img className="navbarico" src={fb}/></a>
+                    <a href="http://www.instagram.com"><img className="navbarico" src={instagram}/></a>
+                    <a href="http://www.google.com"><img className="navbarico" src={googlePng}/></a>
                 </div>
             </div>
         </header>
