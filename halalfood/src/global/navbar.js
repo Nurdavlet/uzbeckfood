@@ -19,7 +19,7 @@ export function Navbar () {
     return (
         <>
         <header>
-            <Link to="/"> <img src={eda} className="eda"/></Link>
+            <Link to="/" className="link"><div className="i"> <i>Eda</i></div></Link>
             <div className="navbar">
                 
                 <ul>

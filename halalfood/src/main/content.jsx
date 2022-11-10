@@ -2,7 +2,12 @@ import React from "react";
 import i18n from "../i18n/config";
 import lupa from "./img/lupa.png";
 import colo from "./img/colo.png";
+import food1 from "./img/halim2.jpg";
 import razmarin from "./img/razamarin.png";
+import ocloc from "./img/pngegg (1).png";
+import chefhat from "./img/pngegg.png";
+import imgaut1 from "./img/Снимок экрана_2022-11-10_21-25-06.png";
+import imgaut2 from "./img/Снимок экрана_2022-11-10_21-26-22.png";
 import "./css/content.css";
 //import io from "socket.io";
 import halim from "./img/halim2.jpg"
@@ -57,11 +62,37 @@ class Content extends React.Component {
                 <h1>{this.props.tr('recipes')}</h1>
                 <div className="recomendations">
                 <div className="items">{this.state.data.map(data => {
-                    return(<div className="item">data.messg</div>);
+                    return(
+                    <div className="item">
+                        <div className="itemimg" style={{backgroundImage: `url(${food1})`}}>
+                            
+                        </div>
+                        <div className="itemtext">
+                            <div>
+                                <h2>Халим</h2>
+                                    {/* <div className="iteminline"> */}
+                                        <div className="iteminline"><img className="itemsico" src={ocloc} /></div>
+                                        <div className="iteminline"><img className="itemsico" src={chefhat} /></div>
+                                        <div className="iteminline"></div>
+                                    {/* </div> */}
+                            </div>
+                            <hr/>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                    );
                 })}</div>
                 </div>
 
                 <h1>{this.props.tr('topauthor')}</h1>
+                <div className="images">
+                    <img className="imgaut" src={imgaut1}></img>
+                    <img className="imgaut" src={imgaut2}></img>
+                    <img className="imgaut" src={imgaut1}></img>
+                    <img className="imgaut" src={imgaut2}></img>
+                </div>
                 <Footer tr={this.props.tr} />
             </div>
             )

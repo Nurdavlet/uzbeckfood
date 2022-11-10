@@ -4,7 +4,7 @@
     margin-left: 175px;
     padding-top: 20px;
     padding-right: 20px;
-    
+    flex-grow: 1;
 }
 /*header*/
 .hrrazmarin {
@@ -54,6 +54,7 @@ h1 {
     font-size: 21px;
 }
 /*recommendations*/
+
 .recomendations {
     border: 1px solid lime;
     
@@ -61,4 +62,61 @@ h1 {
     width: 100%;
     height: fit-content;
     
+}
+.items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.item{
+    height: 265px;
+    width: 545px;
+    display: flex;
+    border: 1px solid red;
+}
+.itemimg {
+    width: 267px;
+    height: 265px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.itemtext {
+    width: 280px;
+    text-align: center;
+    background-color: #ffffff;
+
+}
+h2 {
+    color: #3d3d3d;
+    font-size: 13px;
+    padding-top: 22px;
+    padding-bottom: 30px;
+    
+}
+.iteminline {
+    display: inline-block;
+    width: 78px;
+    border: 1px solid rgb(185, 182, 182);
+    border-radius: 15px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.itemsico {
+    height: 16px;
+    padding-left: 5px;
+}
+.images {
+    /* padding-left: 45%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; 
+}
+.imgaut {
+    height: 55px;
+    padding-bottom: 25px;
 }
