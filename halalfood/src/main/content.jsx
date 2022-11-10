@@ -1,12 +1,45 @@
 import React from "react";
 import i18n from "../i18n/config";
-import lupa from "./lupa.png";
-import colo from "./colo.png";
-import razmarin from "./razamarin.png";
+import lupa from "./img/lupa.png";
+import colo from "./img/colo.png";
+import razmarin from "./img/razamarin.png";
+import "./css/content.css";
+//import io from "socket.io";
+import halim from "./img/halim2.jpg"
+import io from "socket.io-client";
+import Footer from "../global/footer";
+import { withTranslation, useTranslation } from "react-i18next";
+const host = 'http://localhost:8000';
 
-export default function Content() {
+
+class Content extends React.Component {
+        constructor() {
+            super();
+            this.state = {data:[]};
+            this.st = this.st.bind(this);
+               
+        }
         
-        return(
+        st(data) {
+            this.setState({ data: data });
+        }
+        componentDidMount() {
+            const mysocket = io(host, {path: "/api/"} , {transports: ['websocket']});
+            let temp = (data) => {
+                this.st(data);
+                console.log(this.state);
+            }
+            mysocket.on('my event', function(data) {
+                temp (data);
+                
+            });
+            
+        }
+         
+        render() {
+            
+            return(
+                
             <div className="content">
                 <div className="lupacolo">    
                     <div className="searchbabel">
@@ -21,7 +54,19 @@ export default function Content() {
                     <img className="razmarin" src={razmarin}></img>
                     <div className="hr"><hr/></div>
                 </div>
+                <h1>{this.props.tr('recipes')}</h1>
+                <div className="recomendations">
+                <div className="items">{this.state.data.map(data => {
+                    return(<div className="item">data.messg</div>);
+                })}</div>
+                </div>
+
+                <h1>{this.props.tr('topauthor')}</h1>
+                <Footer tr={this.props.tr} />
             </div>
-        );
+            )
+        };
 
 }
+
+export default withTranslation()(Content)

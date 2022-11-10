@@ -1,0 +1,32 @@
+.emailwrite {
+    margin: 0 -25px;
+    height: 125px;
+    display: block;
+    background-color: #e8e8e8;
+}
+.text {
+    text-transform: uppercase;
+    font-size: 11px;
+    padding-top: 20px;
+    display: block;
+    padding-left: 41%;
+}
+.inputtext {
+    border: none;
+    height: 30px;
+}
+.email {
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+form {
+    padding-left: 40%;
+}
+.emailbutton {
+    border: none;
+     background-color: #2f3032;
+    width: 30px;
+    height: 30px;
+}
