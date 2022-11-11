@@ -1,10 +1,11 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("postgres", "postgres", "30032003", {
-    dialect: "postgres"
+const sequelize = new Sequelize("node_test", "node", "30032003", {
+    dialect: "mariadb",
+    logging: false
 });
 
-const Accaunt = sequelize.define("accaunt", {
+const Items = sequelize.define("item", {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -15,12 +16,38 @@ const Accaunt = sequelize.define("accaunt", {
         type: Sequelize.STRING,
         allowNull: false
     },
-    age: {
-        type: Sequelize.INTEGER,
-        allowNull: false
+    img: {
+        type: Sequelize.STRING,
+    },
+    time: {
+        type: Sequelize.STRING,
+    },
+    level: {
+        type: Sequelize.STRING
+    },
+    cal: {
+        type: Sequelize.INTEGER
+    },
+    ingred: {
+        type: Sequelize.STRING,
     }
 });
 
-( async () => {
-    sequelize.sync({alter: true})
-} )();
+async function getdb () {
+    await sequelize.sync({});
+    // const item = await Items.create( {
+    //     name: "Плов",
+    //     img: "pilaf.jpg",
+    //     time: "60",
+    //     level: "medium",
+    //     cal: 1500,
+    //     ingred: "Рис, Мясо, Горох, Масло, Морковь, Специй",
+    // });
+    const tag = await Items.findAll();
+    // console.log(JSON.stringify(tag));
+    return JSON.stringify( tag);
+} 
+
+module.exports.db = getdb;
+
+
