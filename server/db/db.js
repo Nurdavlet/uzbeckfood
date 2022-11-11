@@ -38,7 +38,7 @@ const Items = sequelize.define("item", {
 });
 
 async function getdb () {
-    await sequelize.sync({alert: true});
+    await Items.sync({alert: true});
     // const item = await Items.create( {
     //     name: "Плов",
     //     img: "pilaf.jpg",
@@ -53,5 +53,29 @@ async function getdb () {
 } 
 // getdb();
 module.exports.db = getdb;
+
+const Author = sequelize.define('authors', {
+    id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    name: {
+        type: Sequelize.STRING,
+    },
+    age: Sequelize.STRING,
+    xp: Sequelize.INTEGER,
+    about: Sequelize.TEXT('long'),
+    img: Sequelize.STRING
+});
+
+async function getAuthor() {
+    await Author.sync({alert: true});
+    const results = await Author.findAll();
+    return JSON.stringify(results);
+}
+
+module.exports.getauth = getAuthor;
 
 
