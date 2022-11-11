@@ -8,5 +8,10 @@
     "topauthor": "top authors",
     "subscription":"subscribe to the newsletter of recipes and tips",
     "menu": "menu",
-    "faq": "faq"
+    "faq": "faq",
+    "kcal": "kcal",
+    "hard": "hard",
+    "meddium": "medium",
+    "easy": "easy",
+    "min": "min"
 }

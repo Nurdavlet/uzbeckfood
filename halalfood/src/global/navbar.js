@@ -23,9 +23,9 @@ export function Navbar () {
             <div className="navbar">
                 
                 <ul>
-                    <li><Link to="/recipes" className="link">{t('recipes')}</Link></li>
+                    <li><Link to="/" className="link">{t('recipes')}</Link></li>
                     <li><Link to="/cookbook" className="link">{t('cookbook')}</Link></li>
-                    <li><Link to="/diary" className="link">{t('diary')}</Link></li>
+                    {/* <li><Link to="/diary" className="link">{t('diary')}</Link></li> */}
                     <li><Link to="/authors" className="link">{t('authors')}</Link></li>
                 </ul>
                 <div className="langchangebutton">

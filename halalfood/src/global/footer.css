@@ -1,5 +1,6 @@
 .emailwrite {
-    margin: 0 -25px;
+    margin-left: -25px;
+    margin-right: -20px;
     height: 125px;
     display: block;
     background-color: #e8e8e8;
@@ -35,7 +36,8 @@ form {
     display: flex;
     height: 60px;
     background-color: #252627;
-    margin: 0 -25px;
+    margin-left: -25px;
+    margin-right: -20px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;

@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const http = require('http').Server(app);
+const db = require('./db/db');
 const iomain = require("socket.io")( {
     cors: {
         origin: '*'
@@ -14,11 +15,11 @@ const iomain = require("socket.io")( {
 
 
 
-    iomain.on('connection', (mysocket) => {
+    iomain.on('connection', async (mysocket) => {
         
         mysocket.broadcast.emit('user connected');
         
-        iomain.emit('my event', [{messg: 'Hello'},{messg: 'Hello'},{messg: 'Hello'},{messg: 'Hello'}]);
+        iomain.emit('my event',await db.db() );
     });
     
 

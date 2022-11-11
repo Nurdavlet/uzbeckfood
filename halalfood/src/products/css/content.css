@@ -1,0 +1,140 @@
+
+.content {
+    /* flex-wrap: ; */
+    margin-left: 175px;
+    padding-top: 20px;
+    padding-right: 20px;
+    
+}
+/*header*/
+.hrrazmarin {
+    display: flex;
+    align-items:center;
+}
+.hr{
+    /* width: 50px; */
+    flex-grow: 1;
+
+}
+
+.razmarin {
+    height: 40px;
+}
+
+
+.lupacolo {
+    /* padding-top: 5px; */
+    display: flex;
+    justify-content: space-between;
+}
+.lupa {
+    width: 15px;
+    
+}
+.searchbabel  {
+    width: 15px;
+}
+
+.lupab {
+    border: none;
+    background: none;
+}
+.colodiv {
+    padding-right: 30px;
+}
+.colo {
+    width: 15px;
+}
+
+h1 {
+    color: #5b5b5b;
+    display: table;
+    margin: 25px auto;
+    text-transform: uppercase;
+    font-size: 21px;
+}
+.recomendationsb {
+    
+    
+    max-width: 100%;
+    width: 100%;
+    height: fit-content;
+    
+}
+.itemsb {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.itemb{
+    height: 800px;
+    width: 450px;
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.itemimgb {
+    margin-top: 8px;
+    width: 415px;
+    height: 265px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 99% 99%;
+    z-index: -1;
+}
+.itemtextb {
+    width: 440px;
+    text-align: center;
+    background-color: #ffffff;
+    
+}
+.itemingerb {
+    font-size: 20px;
+}
+.itemingers {
+    font-size: 16px;
+    overflow-y: scroll;
+    height: 300px;
+    margin-top: 10px;
+
+}
+h2 {
+    color: #3d3d3d;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.iteminlineb {
+    display: inline-block;
+    width: 78px;
+    border: 1px solid rgb(185, 182, 182);
+    border-radius: 15px;
+    text-align: left;
+    margin-left: 5px;
+    font-size: 10px;
+    
+}
+
+.itemsicob {
+    height: 16px;
+    padding-left: 5px;
+}
+.imagesb {
+    /* padding-left: 45%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; 
+}
+.imgautb {
+    height: 55px;
+    padding-bottom: 25px;
+}
+
