@@ -30,11 +30,15 @@ const Items = sequelize.define("item", {
     },
     ingred: {
         type: Sequelize.STRING,
+    },
+    howcook: {
+        type: Sequelize.STRING
     }
+
 });
 
 async function getdb () {
-    await sequelize.sync({});
+    await sequelize.sync({alert: true});
     // const item = await Items.create( {
     //     name: "Плов",
     //     img: "pilaf.jpg",
@@ -47,7 +51,7 @@ async function getdb () {
     // console.log(JSON.stringify(tag));
     return JSON.stringify( tag);
 } 
-
+// getdb();
 module.exports.db = getdb;
 
 
