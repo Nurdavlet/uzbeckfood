@@ -18,6 +18,7 @@ import halim from "./img/halim2.jpg"
 import io from "socket.io-client";
 import Footer from "../global/footer";
 import { withTranslation, useTranslation } from "react-i18next";
+import defaults from "../global/defaultmain.json";
 const host = 'http://localhost:8000';
 
 
@@ -33,6 +34,9 @@ class Content extends React.Component {
             this.setState({ data: JSON.parse( data) });
         }
         componentDidMount() {
+            if(this.state.data !== []) {
+                this.st( JSON.stringify(defaults ));
+            }
             const mysocket = io(host, {path: "/api/"} , {transports: ['websocket']});
             let temp = (data) => {
                 this.st(data);

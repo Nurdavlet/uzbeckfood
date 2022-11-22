@@ -11,6 +11,7 @@ import besh from "./img/besh.jpg";
 import ocloc from "./img/pngegg (1).png";
 import chefhat from "./img/pngegg.png";
 import runfast from "./img/icons8-exercise-24.png";
+import defaults from "../global/defaultmain.json";
 const host = 'http://localhost:8000';
 
 class Content extends React.Component {
@@ -25,6 +26,9 @@ class Content extends React.Component {
         this.setState({ data: JSON.parse( data) });
     }
     componentDidMount() {
+        if(this.state.data != []) {
+            this.st(JSON.stringify(defaults));
+        }
         const mysocket = io(host, {path: "/api/"} , {transports: ['websocket']});
         let temp = (data) => {
             this.st(data);

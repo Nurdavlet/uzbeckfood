@@ -9,19 +9,26 @@ const iomain = require("socket.io")( {
     },
     path: '/api/' 
   });
-
-
-
-
-
-
-    iomain.on('connection', async (mysocket) => {
+// const ioauthors = require("socket.io")( {
+//     cors: {
+//         origin: '*',
         
-        mysocket.broadcast.emit('user connected');
+//     },
+//     path: 'api/authors'
+// });
+
+iomain.on('connection', async (mysocket) => {
         
-        iomain.emit('my event',await db.db() );
-    });
-    
+    mysocket.broadcast.emit('user connected');
+        
+    iomain.emit('my event',await db.db() );
+});
+
+iomain.on('connection', async (mysocket) => {
+    mysocket.broadcast.emit('user connected');
+
+    iomain.emit('authors', await db.getauth() )
+});
 
 iomain.listen(8000);
 app.listen(3001);
