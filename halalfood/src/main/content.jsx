@@ -12,13 +12,15 @@ import chefhat from "./img/pngegg.png";
 import imgaut1 from "./img/Снимок экрана_2022-11-10_21-25-06.png";
 import imgaut2 from "./img/Снимок экрана_2022-11-10_21-26-22.png";
 import runfast from "./img/icons8-exercise-24.png";
+import halim from "./img/halim2.jpg"
+import accountimg from "./img/add-user_creatype.png";
 import "./css/content.css";
 //import io from "socket.io";
-import halim from "./img/halim2.jpg"
 import io from "socket.io-client";
 import Footer from "../global/footer";
 import { withTranslation, useTranslation } from "react-i18next";
 import defaults from "../global/defaultmain.json";
+import { Link } from "react-router-dom";
 const host = 'http://localhost:8000';
 
 
@@ -58,8 +60,11 @@ class Content extends React.Component {
                     <div className="searchbabel">
                         <button className="lupab"><img className="lupa" src={lupa}/></button>
                     </div>
-                    <div className="colodiv">
-                        <img src={colo} className="colo"/>
+                        <div>
+                        <div className="colodiv">
+                            <img src={colo} className="colo"/>
+                        </div>
+                        {/*<Link to="/authentification" className="accountbutton"  ><img className="accountimg" src={accountimg} /> </Link>*/}
                     </div>
                 </div>
                 <div className="hrrazmarin">

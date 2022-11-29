@@ -41,11 +41,19 @@
 }
 .colodiv {
     padding-right: 30px;
+    display: inline;
 }
 .colo {
     width: 15px;
 }
 
+.accountbutton {
+
+}
+.accountimg {
+    width: 50px;
+}
+ 
 h1 {
     color: #5b5b5b;
     display: table;

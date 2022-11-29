@@ -84,12 +84,40 @@ class Content extends React.Component {
                                 {data.ingred}
                             </div>
                             <div className="itemingers">
-                                {data.howcook}
+                                {data.howcook}<br/>
+                                Создано {new Date(data.createdAt).getDay() + "." + new Date(data.createdAt).getMonth() + "." + new Date(data.createdAt).getFullYear() }
+                                <br/>
+                                Обновлено {new Date(data.updatedAt).getDay() + "." + new Date(data.updatedAt).getMonth() + "." + new Date(data.updatedAt).getFullYear() }
                             </div>
                         </div>
                     </div>
                     );
                 })}</div>
+                <div className="CRUD">
+                    <form className="fromCRUD">
+                        <textarea className="txareaCRUD">
+
+                        </textarea>
+                        <div>
+                            <div>
+                                <input type={"radio"} id="createCRUD" name="CRUD" value={"create"}/>
+                                <label for="createCRUD">Создать</label>
+                            </div>
+                            
+                            <div>
+                                <input type={"radio"} id="updateCRUD" name="CRUD" value={"update"}/>
+                                <label for="updateCRUD">Изменить</label>
+                            </div>
+                            <div>
+                                <input type={"radio"} id="deleteCRUD" name="CRUD" value={"delete"}/>
+                                <label for="deleteCRUD">Удалить</label>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
             <Footer tr={this.props.tr}/>
             </div>
         );
