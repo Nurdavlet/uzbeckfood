@@ -131,6 +131,7 @@ h2 {
     border: 2px lime solid;
     border-radius: 15px;
     display: flex;
+    
 }
 
 .fromCRUD {
@@ -138,14 +139,18 @@ h2 {
     height: 99%;
     width: 100%;
     display: flex;
+
 }
 
 .txareaCRUD {
     width: 50%;
-    height: 100%;
+    height: 99%;
     border-radius: 15px;
+    
 }
-
+.sumbit {
+    padding: 5px;
+}
 .imagesb {
     /* padding-left: 45%; */
     display: flex;

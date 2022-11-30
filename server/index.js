@@ -3,7 +3,8 @@ const app = express();
 const cors = require('cors');
 const http = require('http').Server(app);
 const db = require('./db/db');
-const url = require('url')
+const url = require('url');
+const busboy = require('connect-busboy');
 const bodyParser = require('body-parser');
 const host = "http://localhost:3000";
 const iomain = require("socket.io")( {
@@ -14,6 +15,7 @@ const iomain = require("socket.io")( {
   });
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
+app.use(busboy());
 const ioauthors = require("socket.io")( {
     cors: {
         origin: '*',
@@ -55,5 +57,15 @@ app.post('/api/auth', (req, res) => {
       }))
     }
 
-})
+});
+app.post('/api/form', async (req, res) => {
+  console.log(req.body)
+  await db.dbset(req.body);
+  if (req.busboy) {
+    req.busboy.on("file", function(fieldName, fileStream, fileName, encoding, mimeType) {
+      console.log(fileStream);
+    })
+  }
+  res.end();
+});
 app.listen(3001);

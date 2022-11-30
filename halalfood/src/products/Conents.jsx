@@ -19,9 +19,21 @@ class Content extends React.Component {
         super();
         this.state = {data: []};
         this.st = this.st.bind(this);
-           
+        this.sumbit = this.sumbit.bind(this);
     }
-    
+    sumbit() {
+        let textdata = document.querySelector('textarea');
+        let imgdata = document.querySelector('input[type="file"]');
+        let mindata = document.querySelector('input[type="number"]');
+        let leveldata = document.querySelector('input[type="radio"]');
+        let recipesdata = document.querySelector('input[type="text"]');
+        console.log(textdata.value);
+        console.log(imgdata?.files);
+        console.log(mindata.value);
+        console.log(leveldata.value);
+        console.log(recipesdata.value);
+
+    }
     st(data) {
         this.setState({ data: JSON.parse( data) });
     }
@@ -63,6 +75,7 @@ class Content extends React.Component {
                         case "maxresdefault.jpg": imgs = sumalak; break;
                         case "besh.jpg": imgs = besh; break;
                         case "halim2.jpg": imgs = halim;
+                        default: imgs = pilav; break;
                     }
                     
                     return(
@@ -94,29 +107,53 @@ class Content extends React.Component {
                     );
                 })}</div>
                 <div className="CRUD">
-                    <form className="fromCRUD">
-                        <textarea className="txareaCRUD">
+                    <form className="fromCRUD" action="http://localhost:3001/api/form" method="POST"  target={"_blank"}>
+                        <textarea className="txareaCRUD" name="text">
 
                         </textarea>
-                        <div>
-                            <div>
-                                <input type={"radio"} id="createCRUD" name="CRUD" value={"create"}/>
-                                <label for="createCRUD">Создать</label>
-                            </div>
-                            
-                            <div>
-                                <input type={"radio"} id="updateCRUD" name="CRUD" value={"update"}/>
-                                <label for="updateCRUD">Изменить</label>
-                            </div>
-                            <div>
-                                <input type={"radio"} id="deleteCRUD" name="CRUD" value={"delete"}/>
-                                <label for="deleteCRUD">Удалить</label>
-                            </div>
-                            <div>
+                        <div className="sumbit">
 
+                            <div>
+                                <label>Введите название еды</label>
+                                <input type={"text"} id="foodnm" name="name"/>
+
+                            </div>
+                            <div>
+                                <input type={"file"} name="img"/>
+                            
+                            </div>
+                            <div>
+                                <label for="min">Введите время приготовления</label>
+                                <input id="min" type={"number"} name="min"/> <br/>
+                            </div>
+                            <div>
+                                <label for="min">Введите количество ккал</label>
+                                <input id="min" type={"number"} name="cal"/> <br/>
+                            </div>
+                            <label>Введите сложность готовки</label>
+                            <div>
+                                <input type="radio" id="easy" name="level" value={"easy"} />
+                                <label for="easy">легкий</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="middle" name="level" value={"middle"}/>
+                                <label for="middle">средний</label>
+                            </div>
+                            <div>
+                                <input type={"radio"} id="hard" name="level" value={"hard"}/>
+                                <label for="hard">сложно</label>
+                            </div>
+                            <div>
+                                <label>Введите ингредиенты</label>
+                                <input type={"text"} id="recipes" name="recipe"/>
+
+                            </div>
+                            <div>
+                                <input type={"submit"} value="sumbit"></input>
                             </div>
                         </div>
                     </form>
+                                {/* <button onClick={this.sumbit}  >Созадть</button> */}
                 </div>
             <Footer tr={this.props.tr}/>
             </div>

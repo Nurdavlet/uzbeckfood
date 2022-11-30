@@ -54,6 +54,23 @@ async function getdb () {
 // getdb();
 module.exports.db = getdb;
 
+
+async function setdb(data) {
+    await Items.sync();
+    const item = await Items.create({
+        name: data.name,
+        img: data.img,
+        time: data.min,
+        level: data.level,
+        cal: data.cal,
+        ingred: data.recipe,
+        howcook: data.text
+    });
+    return {"answer": "Ok"};
+}
+
+module.exports.dbset = setdb;
+
 const Author = sequelize.define('authors', {
     id: {
         type: Sequelize.INTEGER,
